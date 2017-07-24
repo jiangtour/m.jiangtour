@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>酱游科技-互联网解决方案提供商</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no" />
+<!-- CSS -->
+<link rel="stylesheet" href="css/jygw_mobile.css">
+<link rel="stylesheet" href="css/swiper.min.css">   
+<link rel="stylesheet" href="css/weui.min.css"/>
+<script src="js/jquery-2.1.1.min.js"></script>
+</head>
+
+
+<body class="mainbg">
+<!-- Swiper -->
+<div class="top">
+         <div class="top_left">
+            <img src="img/logo_white.png">
+         </div>
+         <a href="fuwuxiangmu.html"><div class="top_right">
+            <img src="img/btn_menu.png">
+         </div></a>
+ </div> 
+  
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide page1">
+      
+      <div class="pg1_logo">
+          <img src="img/icon_logo.png">
+      </div>
+      <div class="pg1_titile">
+         <img src="img/title.png">
+      </div>
+      <div class="pg1_zxbtn">咨询</div>
+      <div class="pg1_btmbtn nextbtn">
+         <img src="img/godown.png">
+      </div>
+       
+    </div>
+    
+    <div class="swiper-slide page2">
+      <!-- <div class="top">
+         <div class="top_left">
+            <img src="img/logo_white.png">
+         </div>
+         <div class="top_right">
+            <img src="img/btn_menu.png">
+         </div>
+      </div>-->
+      
+      <p class="page2_title">CONTACT / 联系我们</p>
+      <p class="page2_wx_title">WECHAT</p>
+      <div class="page2_wx_icon"><img src="img/min.png"></div>
+      <ul class="page2_infor">
+         <li>
+            <p class="page2_infor_title">LOCATION</p>
+            <p class="page2_infor_detail">成都市锦江区锦华路二段36号康郡29栋2单元202</p>
+         </li>
+         <li>
+            <p class="page2_infor_title">E-MAIL</p>
+            <p class="page2_infor_detail">zym@jiangtour.com</p>
+         </li>
+         <li>
+            <p class="page2_infor_title">PHONE</p>
+            <p class="page2_infor_detail">(+86) 136-8817-8114</p>
+         </li>
+         <li>
+            <p class="page2_infor_title">QQ</p>
+            <p class="page2_infor_detail">707016499</p>
+         </li>
+      </ul>
+      
+      
+    </div>
+    
+  </div>
+  <!--<div class="swiper-pagination"></div>--> <!-- 右边页码标记 -->
+    
+</div>
+
+<!-- Swiper JS -->
+<script src="js/swiper.min.js"></script>
+<script>
+var pmkuan=document.body.clientWidth;
+// codepen 没办法直接在 body 标签加属性，所以用这里用 js 给 body 添加 ontouchstart 属性来触发 :active     pg1_zxbtn
+document.body.setAttribute('ontouchstart', '');
+
+<!-- Initialize Swiper -->
+var swiper = new Swiper('.swiper-container', {
+	pagination: '.swiper-pagination',
+	paginationClickable: true,
+	direction: 'vertical',
+	/*nextButton:'.swiper-button-next'*/
+	nextButton:'.nextbtn,.pg1_zxbtn'
+});
+
+//图片闪动
+function showImg(){ 
+   var sdimg = $(".pg1_btmbtn img");
+    if(sdimg.css("visibility") == "visible")    
+//如果可见，则隐藏
+        sdimg.css("visibility","hidden");
+    else 
+        sdimg.css("visibility","visible");    
+//设置图像可见
+    setTimeout('showImg()',500);               
+//间隔的毫秒
+} 
+showImg(); 
+//点击链接	  
+</script>
+</body>
+</html>
